@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+}
+
+.main_container {
+  display: flex;
+}
+
+.files_con,
+.chat_con {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.doc_heading {
+  color: #434343;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.files_con {
+  width: 30%;
+  background-color: #ECEFF8;
+  padding: 0px 0px;
+  max-height: max-content;
+}
+
+.chat_con {
+  width: 70%;
+  padding: 20px;
+}
+
+.file_div {
+  /* background-color: white; */
+  margin: 0px 0px;
+  padding: 10px 10px;
+  border-radius: 0px;
+  max-height: fit-content;
+}
+
+.file_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0px 5px;
+  overflow: hidden;
+  /* background-color: #ff3d57; */
+  /* margin-bottom: 5px; */
+
+}
+
+
+.file_con_1 {
+  width: 80%;
+  padding: 0px 2px;
+  border-radius: 2px;
+}
+
+.file_container:hover {
+  background-color: #cce5ff;
+}
+
+.file_meta_box {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.file_meta_1 {
+  display: flex;
+  align-items: center;
+}
+
+.file_meta_2 {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.file_meta_1 p {
+  margin-left: 8px;
+}
+
+.file_meta_2 p {
+  margin-left: 8px;
+}
+
+.start_chat_btn_box {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background-color: #ECEFF8;
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-radius: 0.25rem;
+  margin-bottom: 5px;
+}
+
+.chat_icon {
+  color: #434343;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.file_name {
+  color: #434343;
+  transition: filter 0.5s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  font-size: 15px;
+  margin-top: 0px;
+}
+
+.file_size,
+.file_pages {
+  font-size: 14px;
+  color: #434343;
+}
+
+/* .blurred {
+  filter: blur(3px);
+} */
+
+button.start_chat_btn {
+  padding: 7px 10px;
+  border: none;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.chat_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.delete-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sample_chat_box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 0px;
+}
+
+.sample_chat_box ::-webkit-scrollbar {
+  display: none;
+}
+
+.input_section {
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  z-index: 2;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.input_box {
+  display: flex;
+  align-items: center;
+}
+
+.msg_input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.send_btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.msg_box_main {
+  margin: 20px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robo_border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00854D;
+  border-radius: 50%;
+  padding: 0px 10px;
+  width: fit-content;
+}
+
+.robo {
+  color: #434343;
+  font-size: 50px;
+  margin: 0;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 32px;
+  color: #434343;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.sample_qua_main {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.que_1,
+.que_2 {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.que_2 {
+  margin-left: 5px;
+}
+
+.que_1_p,
+.que_2_p {
+  color: #434343;
+}
+
+
+.delete-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.delet_box {
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d_icon {
+  font-size: 30px;
+}
+
+.sample_chat_box {
+  width: 80%;
+  margin: 10px;
+  display: block;
+  padding: 10px;
+}
+
+.chat_1_ans {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ECEFF8;
+  padding: 10px;
+}
+
+.chat_1_ans {
+  text-align: start;
+  color: #434343;
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.chat_1_box_Q {
+  margin-bottom: 10px;
+  background-color: #ECEFF8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+  width: fit-content;
+  margin-right: auto;
+}
+
+.chat_1_box_Q p {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.ans_1_box p {
+  font-size: 12px;
+}
+
+.input_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ECEFF8;
+  border-radius: 10px;
+  padding: 2px 5px;
+  position: relative;
+  height: 40px;
+}
+
+.input_box:focus-within {
+  border: 1px solid #00CB73;
+}
+
+/* ChatBox.css */
+.sample_chat_box {
+  transition: filter 0.5s ease;
+}
+
+.msg_input {
+  height: 20px;
+  width: 90%;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  border: none;
+  outline: none;
+  margin: 5px 0px;
+  border: none;
+}
+
+.msg_input:focus {
+  border: none;
+  outline: none;
+}
+
+.send_btn {
+  padding: 8px 10px;
+  border-radius: 2px;
+  color: grey;
+  border: none;
+  background-color: white;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* Adjust this to fit your layout */
+}
+
+.loading-indicator::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  border-top: 3px solid #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* for 3 dots  */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  /* Adjust the height as needed */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.5s infinite alternate;
+  /* Adjust the animation properties as needed */
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    /* Adjust the bounce distance as needed */
+  }
+}
+
+.file_container {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.chat-started .file_container {
+  opacity: 0;
+}
+
+@keyframes yourAnimationName {
+  /* Define your animation keyframes here */
+}
+
+.active {
+  background-color: #00CB73;
+  /* background-color: #0073EA; */
+  /* background-color: white; */
+  border-radius: 2px;
+}
+
+.active p {
+  color: white;
+  font-weight: 500;
+}
+
+.active span {
+  color: white;
+}
+
+.active:hover {
+  background-color: #00CB73;
+}
+
+/* sending loader css */
+.loader {
+  border: 3px solid #f3f3f3;
+  /* Light grey */
+  border-top: 3px solid #00d748;
+  /* Blue */
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* chat loader */
+.dot-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20px;
+  padding: 5px;
+  width: fit-content;
+
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: dotAnimation 1s infinite alternate;
+}
+
+.dot-red {
+  background-color: #ff3d57;
+}
+
+.dot-yellow {
+  background-color: #ffca00;
+}
+
+.dot-green {
+  background-color: #00d748;
+}
+
+@keyframes dotAnimation {
+  to {
+    transform: scale(1.2);
+  }
+}
